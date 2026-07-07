@@ -56,14 +56,14 @@ function loadReportPages() {
 
   pages.forEach((page, index) => {
     const figure = document.createElement("figure");
-    const image = document.createElement("img");
+    const image = document.createElement("div");
     const caption = document.createElement("figcaption");
 
     figure.className = "report-page";
-    image.src = page.src;
-    image.alt = page.alt || `陆野派项目报告册第 ${index + 1} 页`;
-    image.loading = index < 2 ? "eager" : "lazy";
-    image.decoding = "async";
+    image.className = "report-page-image";
+    image.setAttribute("role", "img");
+    image.setAttribute("aria-label", page.alt || `陆野派项目报告册第 ${index + 1} 页`);
+    image.style.backgroundImage = `url("${page.src}")`;
     caption.textContent = `第 ${index + 1} / ${pages.length} 页`;
 
     figure.append(image, caption);
