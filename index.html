@@ -114,7 +114,7 @@
               <li>渠道上架</li>
             </ul>
           </article>
-          <article class="project-card">
+          <article class="project-card project-card-clickable" data-project="luyepai" tabindex="0">
             <div>
               <p class="project-kicker">毕业设计 / 产品研究项目</p>
               <h3>陆野派车载露营手冲咖啡机</h3>
@@ -127,6 +127,7 @@
               <li>竞品分析</li>
               <li>功能架构</li>
             </ul>
+            <button class="project-detail-button" type="button">查看报告册</button>
           </article>
           <article class="project-card">
             <div>
@@ -191,10 +192,37 @@
       </section>
     </main>
 
+    <div class="project-modal" data-project-modal="luyepai" hidden>
+      <div class="project-modal-backdrop" data-modal-close></div>
+      <article
+        class="project-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="luyepai-modal-title"
+      >
+        <div class="project-modal-header">
+          <div>
+            <p class="eyebrow">Project Report</p>
+            <h2 id="luyepai-modal-title">陆野派车载露营手冲咖啡机</h2>
+            <p>
+              以下内容由项目报告册 PDF 按页渲染，按照原 PDF 从前到后的顺序展示。
+            </p>
+          </div>
+          <button class="modal-close-button" type="button" data-modal-close aria-label="关闭项目详情">
+            ×
+          </button>
+        </div>
+        <div class="report-gallery" data-report-gallery>
+          <p class="report-loading">正在加载报告册内容...</p>
+        </div>
+      </article>
+    </div>
+
     <footer class="site-footer">
       <p>© <span id="year"></span> xiangruixiang。保留所有权利。</p>
     </footer>
 
+    <script src="report-data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
