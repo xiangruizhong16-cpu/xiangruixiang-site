@@ -435,20 +435,24 @@ h3 {
 
 .award-gallery {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr) minmax(0, 0.72fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   max-width: 1180px;
-  margin: 36px 0 0 auto;
-  align-items: start;
+  margin: 36px auto 0;
+  align-items: stretch;
 }
 
 .award-stack {
   display: grid;
   gap: 14px;
   align-content: start;
+  height: 100%;
 }
 
 .award-proof-card {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
   overflow: hidden;
   margin: 0;
   border: 1px solid rgba(23, 33, 38, 0.14);
@@ -458,12 +462,28 @@ h3 {
 }
 
 .award-proof-card img {
+  flex: 0 0 auto;
   width: 100%;
   height: auto;
   background: var(--white);
+  object-fit: contain;
+  object-position: center;
+}
+
+.award-gallery > .award-proof-card {
+  height: 100%;
+}
+
+.award-gallery > .award-proof-card img {
+  flex: 1 1 auto;
+  height: 0;
+  min-height: 0;
 }
 
 .award-proof-card figcaption {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
   padding: 14px 16px;
   color: var(--ink);
   font-size: 15px;
@@ -608,6 +628,16 @@ h3 {
 
   .award-stack {
     gap: 18px;
+    height: auto;
+  }
+
+  .award-gallery > .award-proof-card {
+    height: auto;
+  }
+
+  .award-gallery > .award-proof-card img {
+    flex: 0 0 auto;
+    height: auto;
   }
 }
 
