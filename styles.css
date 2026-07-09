@@ -433,6 +433,37 @@ h3 {
   background: linear-gradient(90deg, rgba(196, 106, 74, 0.08), rgba(196, 106, 74, 0));
 }
 
+.award-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1180px;
+  margin: 36px 0 0 auto;
+}
+
+.award-proof-card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(23, 33, 38, 0.14);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 18px 48px rgba(23, 33, 38, 0.1);
+}
+
+.award-proof-card img {
+  width: 100%;
+  height: auto;
+  background: var(--white);
+}
+
+.award-proof-card figcaption {
+  padding: 14px 16px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -563,6 +594,7 @@ h3 {
   .project-list,
   .skill-columns,
   .case-detail-grid,
+  .award-gallery,
   .contact-section {
     grid-template-columns: 1fr;
   }
