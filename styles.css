@@ -375,6 +375,9 @@ h3 {
 }
 
 .project-detail-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-start;
   min-height: 42px;
   margin-top: 24px;
