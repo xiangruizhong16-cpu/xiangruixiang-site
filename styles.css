@@ -313,6 +313,14 @@ h3 {
   gap: 18px;
 }
 
+.project-list-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-section-secondary {
+  background: #e8eee9;
+}
+
 .project-card {
   display: flex;
   min-height: 360px;
